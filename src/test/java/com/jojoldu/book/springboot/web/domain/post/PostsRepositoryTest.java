@@ -34,16 +34,13 @@ public class PostsRepositoryTest {
         String content = "테스트본문";
 
         postsRepository.save(Posts.builder()
-                .title(title)
                 .content(content)
-                .author("jojoldu@gmail.com")
                 .build());
 
         //when
         List<Posts> postsList = postsRepository.findAll();
         //then
         Posts posts = postsList.get(0);
-        assertThat(posts.getTitle()).isEqualTo(title);
         assertThat(posts.getContent()).isEqualTo(content);
     }
 
@@ -52,10 +49,7 @@ public class PostsRepositoryTest {
         //given
         LocalDateTime now = LocalDateTime.of(2019,6,4,0,0,0);
         postsRepository.save(Posts.builder()
-                .title("title")
                 .content("content")
-                
-                .author("author")
                 .build());
 
         //when
