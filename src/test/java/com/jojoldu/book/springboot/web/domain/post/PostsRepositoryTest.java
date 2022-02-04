@@ -32,11 +32,16 @@ public class PostsRepositoryTest {
         //given
         String title = "테스트게시글";
         String content = "테스트본문";
+        Integer check1 = 10;
 
         postsRepository.save(Posts.builder()
                 .title(title)
                 .content(content)
+<<<<<<< Updated upstream
                 .author("jojoldu@gmail.com")
+=======
+                        .check1(check1)
+>>>>>>> Stashed changes
                 .build());
 
         //when

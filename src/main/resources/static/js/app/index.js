@@ -14,10 +14,23 @@ var main = {
         });
     },
     save : function () {
+
+        //if 문을 만들어서 라디오 버튼일 때 처리... -> 근데 이거는 mustache상에서만 처리하는 거라 필요 없을 것 같다.0
         var data = {
+<<<<<<< Updated upstream
             title: $('#title').val(),
             author: $('#author').val(),
             content: $('#content').val()
+=======
+            //title: $('#title').val(),
+            //author: $('#author').val(),
+            content: $('#content').val(),
+            check1: parseInt($("#check1").val()),
+            check2: parseInt($("#check2").val()),
+            check3: parseInt($("#check3").val()),
+            check4: parseInt($("#check4").val()),
+            check5: parseInt($("#check5").val())
+>>>>>>> Stashed changes
         };
 
         $.ajax({
@@ -26,6 +39,7 @@ var main = {
             dataType: 'json',
             contentType:'application/json; charset=utf-8',
             data: JSON.stringify(data)
+
         }).done(function() {
             alert('글이 등록되었습니다.');
             window.location.href = '/';

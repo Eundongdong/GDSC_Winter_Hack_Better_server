@@ -9,12 +9,28 @@ public class PostsResponseDto {
     private Long id;
     private String title;
     private String content;
+<<<<<<< Updated upstream
     private String author;
+=======
+    private Integer check1;
+    private Integer check2;
+    private Integer check3;
+    private Integer check4;
+    private Integer check5;
+>>>>>>> Stashed changes
 
     public PostsResponseDto(Posts entity){
         this.id = entity.getId();
         this.title = entity.getTitle();
         this.content = entity.getContent();
+<<<<<<< Updated upstream
         this.author = entity.getAuthor();
+=======
+        this.check1 = entity.getCheck1();
+        this.check2 = entity.getCheck2();
+        this.check3 = entity.getCheck3();
+        this.check4 = entity.getCheck4();
+        this.check5 = entity.getCheck5();
+>>>>>>> Stashed changes
     }
 }

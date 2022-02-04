@@ -43,12 +43,19 @@ public class PostsApiControllerTest {
         // given
         String title = "title";
         String content = "content";
+        Integer check1 = 1;
 
         PostsSaveRequestDto requestDto = PostsSaveRequestDto
                 .builder()
                 .title(title)
                 .content(content)
+<<<<<<< Updated upstream
                 .author("author")
+=======
+//                .title(title)
+//                .author("author")
+                .check1(check1)
+>>>>>>> Stashed changes
                 .build();
 
         String url = "http://localhost:" + port + "/api/v1/posts";
