@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
 
 @Getter
 @NoArgsConstructor
@@ -21,7 +20,7 @@ public class Posts extends BaseTimeEntity {
 
 
 
-    @Column(columnDefinition = "integer default 0")
+    @Column(columnDefinition = "integer default 0", nullable = true)
     private Integer check1;
     private Integer check2;
     private Integer check3;
