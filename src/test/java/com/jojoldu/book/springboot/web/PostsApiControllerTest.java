@@ -47,15 +47,11 @@ public class PostsApiControllerTest {
 
         PostsSaveRequestDto requestDto = PostsSaveRequestDto
                 .builder()
-                .title(title)
                 .content(content)
-<<<<<<< Updated upstream
-                .author("author")
-=======
+
 //                .title(title)
 //                .author("author")
                 .check1(check1)
->>>>>>> Stashed changes
                 .build();
 
         String url = "http://localhost:" + port + "/api/v1/posts";
@@ -76,9 +72,7 @@ public class PostsApiControllerTest {
     public void updatePost() throws Exception{
         //given
         Posts savedPost = postsRepository.save(Posts.builder()
-                .title("title")
                 .content("content")
-                .author("author")
                 .build());
 
         Long updateId = savedPost.getId();
@@ -86,7 +80,6 @@ public class PostsApiControllerTest {
         String expectedContent = "content2";
 
         PostsUpdateRequestDto requestDto = PostsUpdateRequestDto.builder()
-                .title(expectedTitle)
                 .content(expectedContent)
                 .build();
         String url = "http://localhost:"+port + "/api/v1/posts/"+updateId;

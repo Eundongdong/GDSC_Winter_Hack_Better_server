@@ -16,12 +16,8 @@ public class PostsUpdateRequestDto {
     private Integer check5;
 
     @Builder
-<<<<<<< Updated upstream
-    public PostsUpdateRequestDto(String title, String content){
-        this.title= title;
-=======
+
     public PostsUpdateRequestDto(String content, Integer check1, Integer check2, Integer check3, Integer check4,Integer check5 ){
->>>>>>> Stashed changes
         this.content = content;
         this.check1 = check1;
         this.check2 = check2;

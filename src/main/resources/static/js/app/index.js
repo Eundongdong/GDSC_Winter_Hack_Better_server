@@ -17,11 +17,6 @@ var main = {
 
         //if 문을 만들어서 라디오 버튼일 때 처리... -> 근데 이거는 mustache상에서만 처리하는 거라 필요 없을 것 같다.0
         var data = {
-<<<<<<< Updated upstream
-            title: $('#title').val(),
-            author: $('#author').val(),
-            content: $('#content').val()
-=======
             //title: $('#title').val(),
             //author: $('#author').val(),
             content: $('#content').val(),
@@ -30,7 +25,6 @@ var main = {
             check3: parseInt($("#check3").val()),
             check4: parseInt($("#check4").val()),
             check5: parseInt($("#check5").val())
->>>>>>> Stashed changes
         };
 
         $.ajax({

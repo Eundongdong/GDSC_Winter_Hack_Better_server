@@ -10,15 +10,7 @@ import lombok.NoArgsConstructor;
 public class PostsSaveRequestDto {
     private String title;
     private String content;
-<<<<<<< Updated upstream
-    private String author;
 
-    @Builder
-    public PostsSaveRequestDto(String title, String content, String author) {
-        this.title = title;
-        this.content = content;
-        this.author = author;
-=======
     private Integer check1;
     private Integer check2;
     private Integer check3;
@@ -34,23 +26,16 @@ public class PostsSaveRequestDto {
         this.check3 = check3;
         this.check4 = check4;
         this.check5 = check5;
-
->>>>>>> Stashed changes
     }
 
     public Posts toEntity() {
         return Posts.builder()
-                .title(title)
                 .content(content)
-<<<<<<< Updated upstream
-                .author(author)
-=======
                 .check1(check1)
                 .check2(check2)
                 .check3(check3)
                 .check4(check4)
                 .check5(check5)
->>>>>>> Stashed changes
                 .build();
     }
 }
