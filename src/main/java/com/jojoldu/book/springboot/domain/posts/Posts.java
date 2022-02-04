@@ -15,25 +15,26 @@ public class Posts extends BaseTimeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 500, nullable = false)
+    @Column(name ="title" ,length = 500, nullable = false)
     private String title;
 
-    @Column(columnDefinition = "TEXT", nullable = false)
+    @Column(name="content", columnDefinition = "TEXT", nullable = false)
+
     private String content;
 
-    @Column(columnDefinition = "integer default 0", nullable = true)
+    @Column(name="check1" ,columnDefinition = "integer default 0", nullable = true)
     private Integer check1;
 
-    @Column(columnDefinition = "integer default 0", nullable = true)
+    @Column(name="check2" ,columnDefinition = "integer default 0", nullable = true)
     private Integer check2;
 
-    @Column(columnDefinition = "integer default 0", nullable = true)
+    @Column(name="check3" ,columnDefinition = "integer default 0", nullable = true)
     private Integer check3;
 
-    @Column(columnDefinition = "integer default 0", nullable = true)
+    @Column(name="check4" ,columnDefinition = "integer default 0", nullable = true)
     private Integer check4;
 
-    @Column(columnDefinition = "integer default 1", nullable = true)
+    @Column(name="check5" ,columnDefinition = "integer default 0", nullable = true)
     private Integer check5;
 
     @Builder
