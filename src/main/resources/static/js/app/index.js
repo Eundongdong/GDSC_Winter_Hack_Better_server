@@ -17,8 +17,13 @@ var main = {
         var data = {
             title: $('#title').val(),
             author: $('#author').val(),
-            content: $('#content').val()
-            picture: $('#picture').val()
+            content: $('#content').val(),
+            picture: $('#picture').val(),
+            check1 : parseInt($('#check1').val()),
+            check2 : parseInt($('#check2').val()),
+            check3 : parseInt($('#check3').val()),
+            check4 : parseInt($('#check4').val()),
+            check5 : parseInt($('#check5').val())
         };
 
         console.log(data);

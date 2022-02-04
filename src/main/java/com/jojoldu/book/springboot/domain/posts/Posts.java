@@ -37,17 +37,28 @@ public class Posts extends BaseTimeEntity {
     private Integer check5;
 
     @Builder
-    public Posts(String title,String content,String author, String fileName, String fileOriName, String fileurl){
+    public Posts(String title,String content,String author, String fileName, String fileOriName, String fileurl, Integer check1, Integer check2,Integer check3,Integer check4,Integer check5){
         this.title = title;
         this.content = content;
         this.author = author;
         this.fileName = fileName;
         this.fileOriName = fileOriName;
         this.fileurl = fileurl;
+
+        this.check1 = check1;
+        this.check2 = check2;
+        this.check3 = check3;
+        this.check4 = check4;
+        this.check5 = check5;
     }
 
-    public void update(String title, String content){
+    public void update(String title, Integer check1, Integer check2, Integer check3, Integer check4, Integer check5){
         this.title = title;
         this.content = content;
+        this.check1 = check1;
+        this.check2 =check2;
+        this.check3 =check3;
+        this.check4 =check4;
+        this.check5 =check5;
     }
 }
