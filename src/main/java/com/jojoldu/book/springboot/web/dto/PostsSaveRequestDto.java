@@ -21,13 +21,6 @@ public class PostsSaveRequestDto {
     private Integer check4;
     private Integer check5;
 
-    private String fileName;
-    private String fileOriName;
-    private String fileurl;
-
-    @Autowired
-    PostsRepository filepository;
-
     @Builder
     public PostsSaveRequestDto(String title, String content, Integer check1,Integer check2,Integer check3,Integer check4,Integer check5) {
         this.title = title;
@@ -38,8 +31,6 @@ public class PostsSaveRequestDto {
         this.check3=check3;
         this.check4=check4;
         this.check5=check5;
-
-
 
     }
 

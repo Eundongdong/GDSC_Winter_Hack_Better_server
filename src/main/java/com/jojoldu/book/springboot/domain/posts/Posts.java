@@ -21,12 +21,6 @@ public class Posts extends BaseTimeEntity {
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
 
-    //사진 저장
-    private String fileName;
-    private String fileOriName;
-    private String fileurl;
-
-
     @Column(columnDefinition = "integer default 0", nullable = true)
     private Integer check1;
 
@@ -43,13 +37,9 @@ public class Posts extends BaseTimeEntity {
     private Integer check5;
 
     @Builder
-    public Posts(String title,String content, String fileName, String fileOriName, String fileurl, Integer check1, Integer check2,Integer check3,Integer check4,Integer check5){
+    public Posts(String title,String content, Integer check1, Integer check2,Integer check3,Integer check4,Integer check5){
         this.title = title;
         this.content = content;
-
-        this.fileName = fileName;
-        this.fileOriName = fileOriName;
-        this.fileurl = fileurl;
 
         this.check1 = check1;
         this.check2 = check2;
