@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Getter
 @NoArgsConstructor
@@ -15,11 +16,9 @@ public class Posts extends BaseTimeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 500, nullable = false)
-    private String title;
-
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
+
 
 
     @Column(columnDefinition = "integer default 0")
@@ -40,6 +39,7 @@ public class Posts extends BaseTimeEntity {
     }
 
     public void update(String content, Integer check1, Integer check2, Integer check3, Integer check4,Integer check5){
+
         this.content = content;
         this.check1 = check1;
         this.check2 =check2;

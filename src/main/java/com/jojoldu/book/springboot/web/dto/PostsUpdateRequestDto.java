@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class PostsUpdateRequestDto {
-    private String title;
     private String content;
     private Integer check1;
     private Integer check2;
@@ -16,8 +15,8 @@ public class PostsUpdateRequestDto {
     private Integer check5;
 
     @Builder
-
     public PostsUpdateRequestDto(String content, Integer check1, Integer check2, Integer check3, Integer check4,Integer check5 ){
+
         this.content = content;
         this.check1 = check1;
         this.check2 = check2;

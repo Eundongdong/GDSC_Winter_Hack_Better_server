@@ -25,6 +25,7 @@ var main = {
             check3: parseInt($("#check3").val()),
             check4: parseInt($("#check4").val()),
             check5: parseInt($("#check5").val())
+
         };
 
         $.ajax({

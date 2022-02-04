@@ -8,9 +8,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class PostsSaveRequestDto {
-    private String title;
     private String content;
-
     private Integer check1;
     private Integer check2;
     private Integer check3;
@@ -26,6 +24,7 @@ public class PostsSaveRequestDto {
         this.check3 = check3;
         this.check4 = check4;
         this.check5 = check5;
+
     }
 
     public Posts toEntity() {
@@ -36,6 +35,7 @@ public class PostsSaveRequestDto {
                 .check3(check3)
                 .check4(check4)
                 .check5(check5)
+
                 .build();
     }
 }
