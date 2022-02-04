@@ -29,9 +29,17 @@ public class Posts extends BaseTimeEntity {
 
     @Column(columnDefinition = "integer default 0", nullable = true)
     private Integer check1;
+
+    @Column(columnDefinition = "integer default 0", nullable = true)
     private Integer check2;
+
+    @Column(columnDefinition = "integer default 0", nullable = true)
     private Integer check3;
+
+    @Column(columnDefinition = "integer default 0", nullable = true)
     private Integer check4;
+
+    @Column(columnDefinition = "integer default 1", nullable = true)
     private Integer check5;
 
     @Builder
