@@ -14,7 +14,6 @@ import java.nio.file.Files;
 public class PostsSaveRequestDto {
     private String title;
     private String content;
-    private String author;
 
     private Integer check1;
     private Integer check2;
@@ -30,10 +29,9 @@ public class PostsSaveRequestDto {
     PostsRepository filepository;
 
     @Builder
-    public PostsSaveRequestDto(String title, String content, String author, String fileName, String fileOriName, String fileurl, Integer check1,Integer check2,Integer check3,Integer check4,Integer check5) {
+    public PostsSaveRequestDto(String title, String content, String fileName, String fileOriName, String fileurl, Integer check1,Integer check2,Integer check3,Integer check4,Integer check5) {
         this.title = title;
         this.content = content;
-        this.author = author;
 
         this.check1=check1;
         this.check2=check2;
@@ -52,7 +50,6 @@ public class PostsSaveRequestDto {
         return Posts.builder()
                 .title("제목-")
                 .content(content)
-                .author("작성자-")
                 .fileName(fileName)
                 .fileOriName(fileOriName)
                 .fileurl(fileurl)

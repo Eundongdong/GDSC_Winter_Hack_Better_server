@@ -10,7 +10,6 @@ import java.time.LocalDateTime;
 public class PostsListResponseDto {
     private Long id;
     private String title;
-    private String author;
     private LocalDateTime modifiedDate;
     private Integer check1;
     private Integer check2;
@@ -22,7 +21,6 @@ public class PostsListResponseDto {
     public PostsListResponseDto(Posts entity){
         this.id = entity.getId();
         this.title =entity.getTitle();
-        this.author = entity.getAuthor();
         this.modifiedDate = entity.getModifiedDate();
         this.check1 = entity.getCheck1();
         this.check2 = entity.getCheck2();
