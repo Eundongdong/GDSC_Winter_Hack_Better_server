@@ -43,12 +43,14 @@ public class PostsApiControllerTest {
         // given
         String title = "title";
         String content = "content";
+        Integer check1 = 1;
 
         PostsSaveRequestDto requestDto = PostsSaveRequestDto
                 .builder()
                 .content(content)
 //                .title(title)
 //                .author("author")
+                .check1(check1)
                 .build();
 
         String url = "http://localhost:" + port + "/api/v1/posts";
@@ -77,7 +79,6 @@ public class PostsApiControllerTest {
         String expectedContent = "content2";
 
         PostsUpdateRequestDto requestDto = PostsUpdateRequestDto.builder()
-                //.title(expectedTitle)
                 .content(expectedContent)
                 .build();
         String url = "http://localhost:"+port + "/api/v1/posts/"+updateId;
