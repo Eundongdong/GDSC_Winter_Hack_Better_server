@@ -29,7 +29,7 @@ public class PostsSaveRequestDto {
     PostsRepository filepository;
 
     @Builder
-    public PostsSaveRequestDto(String title, String content, String fileName, String fileOriName, String fileurl, Integer check1,Integer check2,Integer check3,Integer check4,Integer check5) {
+    public PostsSaveRequestDto(String title, String content, Integer check1,Integer check2,Integer check3,Integer check4,Integer check5) {
         this.title = title;
         this.content = content;
 
@@ -40,9 +40,6 @@ public class PostsSaveRequestDto {
         this.check5=check5;
 
 
-        this.fileName = fileName;
-        this.fileOriName = fileOriName;
-        this.fileurl = fileurl;
 
     }
 
