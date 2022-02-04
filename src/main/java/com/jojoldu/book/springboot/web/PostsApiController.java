@@ -1,11 +1,20 @@
 package com.jojoldu.book.springboot.web;
 
+import com.jojoldu.book.springboot.domain.files.Files;
+import com.jojoldu.book.springboot.service.files.FilesService;
 import com.jojoldu.book.springboot.service.posts.PostsService;
 import com.jojoldu.book.springboot.web.dto.PostsResponseDto;
 import com.jojoldu.book.springboot.web.dto.PostsSaveRequestDto;
 import com.jojoldu.book.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.servlet.http.HttpServletRequest;
+import java.io.File;
 
 @RequiredArgsConstructor
 @RestController
@@ -14,7 +23,6 @@ public class PostsApiController {
 
     @PostMapping("/api/v1/posts")
     public Long save(@RequestBody PostsSaveRequestDto requestDto) {
-
         return postsService.save(requestDto);
     }
 
@@ -33,4 +41,6 @@ public class PostsApiController {
         postsService.delete(id);
         return id;
     }
+
+
 }
