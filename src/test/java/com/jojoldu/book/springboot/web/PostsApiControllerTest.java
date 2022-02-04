@@ -46,9 +46,9 @@ public class PostsApiControllerTest {
 
         PostsSaveRequestDto requestDto = PostsSaveRequestDto
                 .builder()
-                .title(title)
                 .content(content)
-                .author("author")
+//                .title(title)
+//                .author("author")
                 .build();
 
         String url = "http://localhost:" + port + "/api/v1/posts";
@@ -61,7 +61,7 @@ public class PostsApiControllerTest {
         assertThat(responseEntity.getBody()).isGreaterThan(0L);
 
         List<Posts> all = postsRepository.findAll();
-        assertThat(all.get(0).getTitle()).isEqualTo(title);
+        //assertThat(all.get(0).getTitle()).isEqualTo(title);
         assertThat(all.get(0).getContent()).isEqualTo(content);
     }
 
@@ -69,17 +69,15 @@ public class PostsApiControllerTest {
     public void updatePost() throws Exception{
         //given
         Posts savedPost = postsRepository.save(Posts.builder()
-                .title("title")
                 .content("content")
-                .author("author")
                 .build());
 
         Long updateId = savedPost.getId();
-        String expectedTitle = "title2";
+        //String expectedTitle = "title2";
         String expectedContent = "content2";
 
         PostsUpdateRequestDto requestDto = PostsUpdateRequestDto.builder()
-                .title(expectedTitle)
+                //.title(expectedTitle)
                 .content(expectedContent)
                 .build();
         String url = "http://localhost:"+port + "/api/v1/posts/"+updateId;
@@ -94,7 +92,7 @@ public class PostsApiControllerTest {
         assertThat(responseEntity.getBody()).isGreaterThan(0L);
 
         List<Posts> all = postsRepository.findAll();
-        assertThat(all.get(0).getTitle()).isEqualTo(expectedTitle);
+        //assertThat(all.get(0).getTitle()).isEqualTo(expectedTitle);
         assertThat(all.get(0).getContent()).isEqualTo(expectedContent);
 
     }
