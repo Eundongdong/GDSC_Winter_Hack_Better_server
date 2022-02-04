@@ -49,15 +49,15 @@ public class PostsSaveRequestDto {
     public Posts toEntity() {
         return Posts.builder()
                 .title("제목-")
-                .content(content)
+                .content("네용")
                 .fileName(fileName)
                 .fileOriName(fileOriName)
                 .fileurl(fileurl)
-                .check1(check1)
-                .check2(check2)
-                .check3(check3)
-                .check4(check4)
-                .check5(check5)
+                .check1(0)
+                .check2(1)
+                .check3(2)
+                .check4(3)
+                .check5(4)
                 .build();
     }
 }

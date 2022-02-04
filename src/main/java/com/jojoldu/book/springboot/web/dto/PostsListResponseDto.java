@@ -21,6 +21,7 @@ public class PostsListResponseDto {
     public PostsListResponseDto(Posts entity){
         this.id = entity.getId();
         this.title =entity.getTitle();
+        this.modifiedDate = entity.getModifiedDate();
         this.check1 = entity.getCheck1();
         this.check2 = entity.getCheck2();
         this.check3 = entity.getCheck3();
